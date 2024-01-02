@@ -7,7 +7,7 @@ module "tutorial_backend_sg" {
   vpc_id      = module.vpc.vpc_id
 
   # Ingress rules and CIDR Blocks
-  ingress_rules       = ["ssh-tcp", "http-80-tcp"]
+  ingress_rules       = ["ssh-tcp", "http-80-tcp", "http-8080-tcp"]
   ingress_cidr_blocks = [module.vpc.vpc_cidr_block]
 
   # Egress rules and CIDR Blocks
